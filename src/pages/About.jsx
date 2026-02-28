@@ -67,19 +67,20 @@ export default function About() {
               whileHover={{ scale: 1.03 }}
               className="text-5xl md:text-7xl font-bold tracking-tight leading-tight"
             >
-              I build systems
-              <span className="block bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient">
-                that stay calm under pressure.
+              I am a passionate
+              <span className="block bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                aspiring software developer.
               </span>
             </motion.h1>
 
             <p className="mt-8 text-lg md:text-xl text-white/70 max-w-2xl mx-auto">
-              Engineer by profession. Thinker by nature.  
-              Drawn to complexity, clarity, and quiet reliability.
+              MCA graduate with a strong foundation in Python, MySQL, and Web
+              Technologies. Motivated to learn, grow, and contribute to
+              real-world software development projects.
             </p>
 
             <p className="mt-10 italic text-white/50">
-              “Poetry in systems is when nothing breaks.”
+              “Every project is a new opportunity to learn and improve.”
             </p>
           </motion.div>
         </section>
@@ -92,30 +93,33 @@ export default function About() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-semibold mb-8">My Story</h2>
+            <h2 className="text-3xl font-semibold mb-8">My Journey</h2>
 
             <div className="space-y-6 text-white/70 leading-relaxed text-lg">
               <p>
-                My journey into engineering didn’t begin with ambition.
-                It began with curiosity — a desire to understand how systems behave,
-                how they fail, and how they recover.
+                My interest in technology started with curiosity about how
+                software applications work and how systems manage data
+                efficiently. During my academic journey, I developed a strong
+                interest in programming and problem-solving.
               </p>
 
               <p>
-                Over time, curiosity turned into responsibility.
-                Production systems. Real users. Real consequences.
-                That’s where I learned that the best engineering is quiet.
+                I completed my Master of Computer Applications in 2024 and
+                gained practical exposure through a 6-week internship in
+                Python AI/ML. This experience helped me understand real-world
+                application development and teamwork.
               </p>
 
               <p>
-                Today, I focus on building systems that scale gracefully,
-                recover predictably, and respect the humans who depend on them.
+                Through academic projects like System Analyzer and Academic
+                Management System, I learned how to design user-friendly
+                applications and manage databases effectively.
               </p>
             </div>
           </motion.div>
         </section>
 
-        {/* ================= PHILOSOPHY ================= */}
+        {/* ================= SKILLS / THINKING ================= */}
         <section className="py-32 bg-white/5 px-6">
           <motion.div
             variants={section}
@@ -125,15 +129,15 @@ export default function About() {
             className="max-w-6xl mx-auto"
           >
             <h2 className="text-3xl font-semibold mb-14 text-center">
-              How I Think
+              My Strengths
             </h2>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                "Reliability over hype",
-                "Simplicity beats cleverness",
-                "Automation respects time",
-                "Observability before assumptions",
+                "Strong foundation in Python",
+                "Knowledge of MySQL & Databases",
+                "Basic Web Development (HTML, CSS, JS)",
+                "Teamwork & Communication Skills",
               ].map((item) => (
                 <div
                   key={item}
@@ -157,14 +161,14 @@ export default function About() {
             transition={{ duration: 1 }}
           >
             <h2 className="text-4xl font-bold mb-6">
-              Let’s build something meaningful.
+              Let’s start something great together.
             </h2>
 
             <p className="text-white/60 mb-10">
-              Open to thoughtful conversations and ambitious systems.
+              Actively seeking entry-level opportunities to contribute,
+              collaborate, and grow as a software developer.
             </p>
 
-            {/* IMPORTANT: use Link, not <a> */}
             <Link
               to="/contact"
               className="inline-block px-8 py-4 rounded-full

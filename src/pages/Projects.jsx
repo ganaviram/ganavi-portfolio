@@ -2,100 +2,70 @@ import { motion, useMotionValue, useMotionTemplate } from "framer-motion";
 
 const projects = [
   {
-    title: "Cloud-Native Data Platform",
-    context: "FinTech · Internal System",
+    title: "Academic Management Information System",
+    context: "MCA Major Project · Web Application",
     description:
-      "Designed and operated a secure, scalable cloud data platform handling batch and streaming workloads under strict compliance requirements.",
+      "Developed a web-based academic administration system to manage student records, academic information, and reporting efficiently.",
     highlights: [
-      "Multi-account AWS architecture with strong isolation",
-      "ETL pipelines using Spark & Airflow",
-      "Cost-optimized storage and compute layers",
-      "Security-first IAM and networking design",
+      "Automated student data entry and management",
+      "Search and filter functionality for quick access",
+      "Report generation with export to MS Excel",
+      "User-friendly interface with structured navigation",
     ],
-    tools: ["AWS", "Spark", "Airflow", "S3", "IAM", "Terraform"],
+    tools: ["Python", "MySQL", "HTML", "CSS", "JavaScript"],
     impact:
-      "Enabled reliable data processing at scale while reducing manual operations and improving observability.",
+      "Reduced manual paperwork effort and improved accuracy in managing academic data.",
   },
   {
-    title: "Multi-Account AWS Infrastructure",
-    context: "Enterprise Platform · Internal",
+    title: "System Analyzer Web Application",
+    context: "Web-Based Utility Project",
     description:
-      "Built and maintained a multi-account AWS foundation supporting multiple teams and environments with strict security boundaries.",
+      "Built an interactive web application that allows users to view detailed system information through a simple and accessible interface.",
     highlights: [
-      "Account structure & environment isolation",
-      "VPC design with secure networking",
-      "Centralized logging & monitoring",
-      "Least-privilege IAM enforcement",
+      "Displays complete system configuration in one place",
+      "Designed intuitive and interactive UI",
+      "Simplified command-line level system access",
+      "Improved accessibility for non-technical users",
     ],
-    tools: ["AWS", "VPC", "IAM", "CloudWatch", "Terraform", "OpenTofu"],
+    tools: ["Python", "HTML", "CSS", "JavaScript"],
     impact:
-      "Improved security posture and simplified onboarding for new services and teams.",
+      "Made system information easily accessible through a clean web interface.",
   },
   {
-    title: "CI/CD & Automation Framework",
-    context: "Platform Engineering · Internal",
+    title: "Cars & Accessories Sales Management System",
+    context: "BCA Project · Desktop Application",
     description:
-      "Implemented automation-first CI/CD pipelines to reduce deployment risk and accelerate delivery across services.",
+      "Designed a sales management system to manage car and accessories data, customer reservations, and daily sales records.",
     highlights: [
-      "Git-based CI/CD workflows",
-      "Infrastructure as Code automation",
-      "Environment-aware deployments",
-      "Rollback-friendly release strategy",
+      "Maintained product and customer data securely",
+      "Supported offline functionality",
+      "Integrated SQL database for data storage",
+      "Tracked daily reservations and transactions",
     ],
-    tools: ["CI/CD", "Terraform", "Ansible", "Python"],
+    tools: ["Visual Basic 6.0", "SQL", "Database Management"],
     impact:
-      "Reduced deployment time and manual intervention while improving reliability.",
+      "Improved organization and tracking of sales data in a structured format.",
   },
   {
-    title: "Observability & Reliability Stack",
-    context: "SRE · Production Systems",
+    title: "Python AI/ML Internship Mini Projects",
+    context: "Internship Training · Dotch Endeavours Pvt Ltd",
     description:
-      "Designed observability systems to improve system visibility, alerting quality, and incident response.",
+      "Worked on small practical tasks and exercises during a 6-week internship focused on Python programming and AI/ML fundamentals.",
     highlights: [
-      "Metrics, logging & alerting strategy",
-      "Noise-free alerting design",
-      "Dashboards for system health",
-      "Production incident support",
+      "Implemented basic machine learning concepts",
+      "Practiced data handling using Python",
+      "Strengthened logical and analytical thinking",
+      "Completed guided coding exercises and assignments",
     ],
-    tools: ["Prometheus", "Grafana", "Alerting", "Logging"],
+    tools: ["Python", "Basic Machine Learning Concepts"],
     impact:
-      "Improved incident response time and system reliability in production.",
-  },
-  {
-    title: "Applied AI / ML Systems",
-    context: "Data Platforms · Experimental & Production",
-    description:
-      "Worked on applying machine learning capabilities within data platforms, focusing on pipelines, experimentation, and production readiness rather than standalone models.",
-    highlights: [
-      "Data preparation and feature pipelines",
-      "Experimentation & evaluation workflows",
-      "Model integration into data systems",
-      "Scalability and reliability considerations",
-    ],
-    tools: ["Python", "Data Pipelines", "ML Workflows", "Cloud Infrastructure"],
-    impact:
-      "Enabled data-driven experimentation while keeping systems observable, scalable, and maintainable.",
-  },
-  {
-    title: "Networking & Security Architecture",
-    context: "Cloud Infrastructure · Production",
-    description:
-      "Designed secure networking foundations and access controls for cloud environments supporting multiple teams and workloads.",
-    highlights: [
-      "VPC and subnet architecture design",
-      "Secure connectivity and traffic control",
-      "IAM boundaries and least-privilege access",
-      "Security best practices for production systems",
-    ],
-    tools: ["VPC", "Networking", "IAM", "Security Architecture"],
-    impact:
-      "Improved system security, reduced risk, and enabled safe scaling of services.",
+      "Strengthened practical understanding of Python and foundational AI/ML workflows.",
   },
 ];
 
 export default function Projects() {
   return (
-    <main className="relative px-6 py-32 max-w-7xl mx-auto">
+    <main className="relative px-6 py-32 max-w-7xl mx-auto bg-black text-white">
 
       {/* HERO */}
       <section className="mb-28 text-center">
@@ -105,7 +75,7 @@ export default function Projects() {
           transition={{ duration: 1 }}
           className="text-4xl md:text-6xl font-semibold tracking-tight"
         >
-          Selected Work & Case Studies
+          Academic Projects & Practical Work
         </motion.h1>
 
         <motion.p
@@ -114,9 +84,8 @@ export default function Projects() {
           transition={{ delay: 0.6 }}
           className="mt-6 max-w-3xl mx-auto text-neutral-400"
         >
-          Systems I’ve designed and operated across cloud, infrastructure,
-          data platforms, reliability engineering, applied AI/ML, and networking.
-          Projects are anonymized to respect confidentiality.
+          Projects developed during academic programs and internship training,
+          demonstrating my understanding of programming, databases, and web development.
         </motion.p>
       </section>
 
@@ -135,8 +104,8 @@ export default function Projects() {
           viewport={{ once: true }}
           className="text-sm italic text-neutral-500"
         >
-          My work focuses on building reliable systems. Code, tools, and models
-          are always in service of that goal.
+          Each project strengthened my understanding of software development
+          and prepared me for real-world challenges.
         </motion.p>
       </section>
     </main>
@@ -144,7 +113,7 @@ export default function Projects() {
 }
 
 /* =========================
-   PROJECT CARD WITH CURSOR GLOW
+   PROJECT CARD
 ========================= */
 
 function ProjectCard({ project, delay }) {
@@ -206,7 +175,7 @@ function ProjectCard({ project, delay }) {
 
         {/* RIGHT */}
         <div className="md:w-72 shrink-0">
-          <p className="text-sm text-neutral-500 mb-2">Tools & Tech</p>
+          <p className="text-sm text-neutral-500 mb-2">Tools & Technologies</p>
           <div className="flex flex-wrap gap-2 mb-6">
             {project.tools.map((tool) => (
               <span
@@ -220,7 +189,7 @@ function ProjectCard({ project, delay }) {
             ))}
           </div>
 
-          <p className="text-sm text-neutral-500">Impact</p>
+          <p className="text-sm text-neutral-500">Outcome</p>
           <p className="mt-2 text-neutral-300 text-sm leading-relaxed">
             {project.impact}
           </p>

@@ -9,7 +9,7 @@ export default function Education() {
   const yFast = useTransform(scrollYProgress, [0, 1], [0, -260]);
 
   return (
-    <main ref={ref} className="relative overflow-hidden">
+    <main ref={ref} className="relative overflow-hidden bg-black text-white">
 
       {/* SCROLL PROGRESS BAR */}
       <motion.div
@@ -36,19 +36,19 @@ export default function Education() {
           className="max-w-4xl"
         >
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-            <span className="block text-white">Foundations</span>
-            <span className="block bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient">
-              before scale.
+            <span className="block text-white">Building Knowledge</span>
+            <span className="block bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              step by step.
             </span>
           </h1>
 
           <p className="mt-6 text-lg text-white/70">
-            From science to systems — my education shaped how I think,
-            reason, and build reliable software.
+            My academic journey laid the foundation for programming,
+            problem-solving, and understanding how software systems work.
           </p>
 
           <p className="mt-10 italic text-white/40">
-            “Strong systems begin with strong fundamentals.”
+            “Strong fundamentals create confident developers.”
           </p>
         </motion.div>
       </section>
@@ -80,7 +80,7 @@ export default function Education() {
               </p>
 
               <p className="mt-1 text-sm text-white/50">
-                {item.location} • {item.university}
+                {item.location} • {item.year}
               </p>
 
               <p className="mt-4 text-white/60 italic">
@@ -100,13 +100,13 @@ export default function Education() {
           transition={{ duration: 1 }}
           className="text-2xl md:text-3xl text-white/70 font-light"
         >
-          Degrees shaped my thinking.
+          Education built my foundation.
           <br />
-          Certifications sharpened my execution.
+          Training strengthened my practical skills.
         </motion.p>
       </section>
 
-      {/* CERTIFICATIONS */}
+      {/* TRAINING & CERTIFICATIONS */}
       <section className="max-w-6xl mx-auto px-6 pb-32 relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -115,16 +115,13 @@ export default function Education() {
           transition={{ duration: 0.6 }}
           className="text-3xl md:text-4xl font-semibold text-center mb-16"
         >
-          Certifications & Credentials
+          Training & Certifications
         </motion.h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {certifications.map((cert, index) => (
-            <motion.a
+            <motion.div
               key={cert.name}
-              href={cert.link}
-              target="_blank"
-              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -139,15 +136,15 @@ export default function Education() {
               </p>
 
               <p className="mt-2 text-sm text-white/50">
-                View credential →
+                {cert.description}
               </p>
-            </motion.a>
+            </motion.div>
           ))}
         </div>
 
         <p className="mt-12 text-center text-white/50 italic">
-          Validated expertise across cloud, infrastructure, databases,
-          and production-grade systems.
+          Continuously learning and improving technical skills to stay
+          industry-ready.
         </p>
       </section>
     </main>
@@ -158,54 +155,43 @@ export default function Education() {
 
 const educationData = [
   {
-    title: "Secondary Education (Class X)",
-    institution: "Kalanga High School",
-    location: "Odisha",
-    university: "Board of Secondary Education",
-    note: "Early grounding in discipline, logic, and curiosity.",
+    title: "Master of Computer Applications (MCA)",
+    institution: "The Oxford College of Engineering",
+    location: "Bangalore, Karnataka",
+    year: "2024 • 77%",
+    note:
+      "Focused on programming, databases, and software development concepts.",
+  },
+  {
+    title: "Bachelor of Computer Applications (BCA)",
+    institution: "SMSG Jain Degree College",
+    location: "Bangalore, Karnataka",
+    year: "2022 • 75%",
+    note:
+      "Built strong foundation in computer fundamentals and application development.",
   },
   {
     title: "Higher Secondary (Science)",
-    institution: "Rajsunakhala College",
-    location: "Odisha",
-    university: "CHSE Odisha",
-    note: "Developed analytical thinking through science and mathematics.",
+    institution: "Pre-University Education",
+    location: "2019",
+    year: "70%",
+    note:
+      "Developed analytical thinking through mathematics and science subjects.",
   },
   {
-    title: "B.Sc. Chemistry (Honours)",
-    institution: "Paramananda Degree College",
-    location: "Odisha",
-    university: "Utkal University",
-    note: "Chemistry taught precision, patience, and respect for processes.",
-  },
-  {
-    title: "Master of Computer Applications (MCA)",
-    institution: "The Oxford College of Engineering",
-    location: "Karnataka",
-    university: "Visvesvaraya Technological University",
-    note: "Bridged academic theory with real-world software systems.",
+    title: "Secondary School (SSLC)",
+    institution: "Indian Public School",
+    location: "2017",
+    year: "55%",
+    note:
+      "Early academic journey that shaped discipline and learning habits.",
   },
 ];
 
 const certifications = [
   {
-    name: "AWS Certified Solutions Architect – Associate",
-    link: "https://www.credly.com/earner/earned/badge/16c0be1f-2382-4c56-8382-dc56f705ec4a",
-  },
-  {
-    name: "AWS Certified Developer – Associate",
-    link: "https://www.credly.com/earner/earned/badge/b305d33c-fd3d-4241-a655-d62c81135601",
-  },
-  {
-    name: "AWS Certified Cloud Practitioner",
-    link: "https://www.credly.com/earner/earned/badge/f0205b45-a796-46e9-9efb-2f5c963b4795",
-  },
-  {
-    name: "Yugabyte Certified",
-    link: "https://www.credential.net/cec03fc0-c9c1-43e6-86f4-c37a7df23b98#acc.4eCO7o6d",
-  },
-  {
-    name: "OpenTofu Certified",
-    link: "https://www.credly.com/earner/earned/badge/b6f67ff5-2cb3-430e-a22a-e6687d849237",
+    name: "Python AI/ML Internship Training",
+    description:
+      "Completed 6-week internship training at Dotch Endeavours Pvt Ltd focusing on Python and AI/ML fundamentals.",
   },
 ];

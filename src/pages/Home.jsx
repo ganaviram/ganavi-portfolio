@@ -7,9 +7,9 @@ import {
 } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
-import profilePic from "../assets/mypic.jpeg"; // adjust path if needed
+import profilePic from "../assets/mypic.jpeg";
 
-const name = "Abhilash";
+const name = "Ganavi";
 
 export default function Home() {
   const mouseX = useMotionValue(0);
@@ -17,7 +17,6 @@ export default function Home() {
 
   const imageRef = useRef(null);
 
-  // Parallax tilt for image
   const rotateX = useTransform(mouseY, [-200, 200], [12, -12]);
   const rotateY = useTransform(mouseX, [-200, 200], [-12, 12]);
 
@@ -48,10 +47,10 @@ export default function Home() {
       onMouseMove={handleMouseMove}
       className="relative min-h-screen bg-black text-white overflow-hidden"
     >
-      {/* ================= FILM GRAIN ================= */}
+      {/* Film Grain */}
       <div className="pointer-events-none absolute inset-0 z-50 opacity-[0.035] bg-[url('/grain.png')] mix-blend-overlay" />
 
-      {/* ================= CURSOR GLOW ================= */}
+      {/* Cursor Glow */}
       <motion.div
         className="pointer-events-none absolute inset-0 -z-10"
         style={{
@@ -65,24 +64,21 @@ export default function Home() {
         }}
       />
 
-      {/* FLOATING ORBS */}
+      {/* Floating Orbs */}
       <motion.div
         animate={{ y: [0, -40, 0] }}
         transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
-        className="pointer-events-none absolute top-32 left-24 -z-10
-             w-72 h-72 rounded-full bg-indigo-500/10 blur-3xl"
+        className="pointer-events-none absolute top-32 left-24 -z-10 w-72 h-72 rounded-full bg-indigo-500/10 blur-3xl"
       />
       <motion.div
         animate={{ y: [0, 50, 0] }}
         transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
-        className="pointer-events-none absolute bottom-32 right-24 -z-10
-             w-80 h-80 rounded-full bg-pink-500/10 blur-3xl"
+        className="pointer-events-none absolute bottom-32 right-24 -z-10 w-80 h-80 rounded-full bg-pink-500/10 blur-3xl"
       />
 
-      {/* ================= HERO ================= */}
+      {/* Hero Section */}
       <section className="relative flex flex-col items-center justify-center text-center px-6 pt-44 pb-32">
-        
-        {/* ================= PROFILE IMAGE ================= */}
+        {/* Profile Image */}
         <motion.div
           ref={imageRef}
           onMouseMove={handleImageMove}
@@ -97,28 +93,18 @@ export default function Home() {
           }}
           className="relative mb-16"
         >
-          {/* Rotating Gradient Glow */}
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-            className="absolute -inset-6 rounded-3xl
-                       bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
-                       blur-3xl opacity-30"
+            className="absolute -inset-6 rounded-3xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 blur-3xl opacity-30"
           />
 
-          {/* Glass Morph Card */}
-          <div className="relative rounded-3xl p-6
-                          bg-white/5 backdrop-blur-xl
-                          border border-white/10
-                          shadow-[0_0_60px_rgba(168,85,247,0.25)] overflow-hidden">
-
-            {/* Hover Lift Wrapper */}
+          <div className="relative rounded-3xl p-6 bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_0_60px_rgba(168,85,247,0.25)] overflow-hidden">
             <motion.div
               whileHover={{ y: -8 }}
               transition={{ type: "spring", stiffness: 200 }}
               className="relative"
             >
-              {/* Light Sweep */}
               <motion.div
                 initial={{ x: "-150%" }}
                 animate={{ x: "150%" }}
@@ -128,16 +114,13 @@ export default function Home() {
                   repeatDelay: 5,
                   ease: "easeInOut",
                 }}
-                className="absolute inset-0 z-10
-                           bg-gradient-to-r from-transparent via-white/20 to-transparent
-                           skew-x-12"
+                className="absolute inset-0 z-10 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12"
               />
 
               <motion.img
                 src={profilePic}
-                alt="Abhilash"
-                className="w-56 h-64 md:w-64 md:h-72 object-cover
-                           rounded-2xl shadow-2xl"
+                alt="Ganavi"
+                className="w-56 h-64 md:w-64 md:h-72 object-cover rounded-2xl shadow-2xl"
                 animate={{
                   y: [0, -10, 0],
                   scale: [1, 1.02, 1],
@@ -146,18 +129,12 @@ export default function Home() {
                   y: { duration: 6, repeat: Infinity, ease: "easeInOut" },
                   scale: { duration: 8, repeat: Infinity, ease: "easeInOut" },
                 }}
-                style={{
-                  boxShadow: `
-                    0px 20px 60px rgba(0,0,0,0.6),
-                    0px 0px 40px rgba(168,85,247,0.25)
-                  `,
-                }}
               />
             </motion.div>
           </div>
         </motion.div>
 
-        {/* ================= NAME ================= */}
+        {/* Name */}
         <motion.h1
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -174,14 +151,12 @@ export default function Home() {
                 transition={{
                   delay: 0.6 + i * 0.08,
                   duration: 0.6,
-                  ease: "easeOut",
                 }}
                 whileHover={{
                   scale: 1.2,
                   textShadow: "0px 0px 40px rgba(168,85,247,1)",
                 }}
-                className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400
-                           bg-clip-text text-transparent cursor-default"
+                className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
               >
                 {char}
               </motion.span>
@@ -190,83 +165,75 @@ export default function Home() {
           .
         </motion.h1>
 
+        {/* Intro */}
         <motion.p
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.4 }}
           className="mt-10 text-neutral-400 max-w-2xl text-lg leading-relaxed"
         >
-          A software engineer who enjoys building systems that work in the real
-          world — reliable, scalable, and thoughtfully designed.
+          A passionate and motivated MCA graduate with a strong foundation in
+          Python, MySQL, and Web Technologies. Completed internship training in
+          Python AI/ML and built academic projects focused on system
+          applications and management systems. Actively seeking an entry-level
+          opportunity to grow as a software professional.
         </motion.p>
       </section>
 
-      {/* ================= PERSONAL QUOTE ================= */}
+      {/* Personal Quote */}
       <section className="px-6 py-28 text-center">
         <motion.blockquote
-          whileHover={{
-            scale: 1.02,
-            textShadow: "0px 0px 30px rgba(255,255,255,0.15)",
-          }}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
           transition={{ duration: 0.9 }}
           className="max-w-3xl mx-auto text-xl md:text-2xl italic text-neutral-300"
         >
-          “I believe technology should feel calm, intuitive, and human —
-          something that quietly supports life instead of complicating it.”
+          “I believe learning never stops. Every small project is a step toward
+          building confidence, improving skills, and becoming a better
+          developer.”
         </motion.blockquote>
 
-        <p className="mt-4 text-sm text-neutral-500">
-          — Personal philosophy
-        </p>
+        <p className="mt-4 text-sm text-neutral-500">— Personal belief</p>
       </section>
 
-      {/* ================= PROFESSIONAL QUOTE ================= */}
+      {/* Professional Quote */}
       <section className="px-6 py-28 text-center bg-white/5 backdrop-blur">
         <motion.blockquote
-          whileHover={{
-            scale: 1.02,
-            textShadow: "0px 0px 35px rgba(168,85,247,0.35)",
-          }}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
           transition={{ duration: 0.9 }}
           className="max-w-3xl mx-auto text-xl md:text-2xl italic text-neutral-200"
         >
-          “Engineering resilient, scalable systems across cloud, data, and
-          infrastructure — with a systems-first mindset and production ownership.”
+          “Focused on building practical software solutions using Python,
+          MySQL, HTML, CSS, and JavaScript while continuously strengthening
+          problem-solving skills.”
         </motion.blockquote>
 
-        <p className="mt-4 text-sm text-neutral-500">
-          — Professional approach
-        </p>
+        <p className="mt-4 text-sm text-neutral-500">— Career objective</p>
       </section>
 
-      {/* ================= PERSONAL + PROFESSIONAL ================= */}
+      {/* Cards */}
       <section className="px-6 py-32 max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
         {[
           {
-            title: "Beyond the keyboard",
+            title: "Beyond academics",
             text:
-              "Outside of work, I enjoy cooking, singing, and learning things that have nothing to do with code. I value balance, clarity, and long-term thinking — in life as much as in engineering.",
-            glow: "hover:border-indigo-400/50 hover:shadow-[0_0_35px_rgba(99,102,241,0.3)]",
+              "I enjoy learning new languages and exploring new technologies. I value discipline, teamwork, and effective communication while continuously improving both technical and personal skills.",
+            glow:
+              "hover:border-indigo-400/50 hover:shadow-[0_0_35px_rgba(99,102,241,0.3)]",
           },
           {
-            title: "At work",
+            title: "Technical focus",
             text:
-              "I work across DevOps, SRE, data platforms, and cloud infrastructure, focusing on systems that are observable, maintainable, and built to scale under real-world constraints.",
-            glow: "hover:border-pink-400/50 hover:shadow-[0_0_35px_rgba(236,72,153,0.3)]",
+              "Strong foundation in Python and MySQL with knowledge of HTML, CSS, and JavaScript. Built projects like System Analyzer and Academic Management System during MCA, along with internship training in Python AI/ML.",
+            glow:
+              "hover:border-pink-400/50 hover:shadow-[0_0_35px_rgba(236,72,153,0.3)]",
           },
         ].map((card) => (
           <motion.div
             key={card.title}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            whileHover={{ y: -10 }}
             transition={{ duration: 0.7 }}
             className={`rounded-3xl p-10 bg-white/5 border border-white/10 backdrop-blur transition ${card.glow}`}
           >
@@ -276,38 +243,30 @@ export default function Home() {
         ))}
       </section>
 
-      {/* ================= FINAL CTA ================= */}
+      {/* CTA */}
       <section className="px-6 pb-44 text-center">
         <motion.h2
-          whileHover={{
-            textShadow: "0px 0px 40px rgba(168,85,247,0.6)",
-          }}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="text-3xl md:text-4xl font-semibold mb-6"
         >
-          Personal values. Professional execution.
+          Ready to learn. Ready to contribute.
         </motion.h2>
 
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.15 }}
           className="text-neutral-400 mb-12"
         >
-          Open to meaningful conversations, collaborations, and opportunities.
+          Actively seeking entry-level opportunities where I can apply my
+          skills, contribute to team success, and grow professionally.
         </motion.p>
 
         <Link
           to="/contact"
-          className="inline-block px-8 py-4 rounded-xl
-                     bg-gradient-to-r from-indigo-500 to-pink-500
-                     text-sm font-medium
-                     hover:scale-110 hover:shadow-[0_0_40px_rgba(168,85,247,0.7)]
-                     transition"
+          className="inline-block px-8 py-4 rounded-xl bg-gradient-to-r from-indigo-500 to-pink-500 text-sm font-medium hover:scale-110 hover:shadow-[0_0_40px_rgba(168,85,247,0.7)] transition"
         >
           Get in touch
         </Link>

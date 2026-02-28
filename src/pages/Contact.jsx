@@ -6,29 +6,29 @@ const contacts = [
   {
     name: "LinkedIn",
     icon: Linkedin,
-    link: "https://www.linkedin.com/in/abhilash251105/",
-    value: "linkedin.com/in/abhilash251105",
+    link: "https://www.linkedin.com/in/ganavi251105/",
+    value: "linkedin.com/in/ganavi251105",
     copy: false,
   },
   {
     name: "GitHub",
     icon: Github,
-    link: "https://github.com/abhilash251105",
-    value: "github.com/abhilash251105",
+    link: "https://github.com/ganaviram",
+    value: "github.com/ganavi",
     copy: false,
   },
   {
     name: "Email",
     icon: Mail,
-    link: "mailto:abhilashtmca2023@gmail.com",
-    value: "abhilashtmca2023@gmail.com",
+    link: "mailto:ganaviram30@gmail.com",
+    value: "ganaviram30@gmail.com",
     copy: true,
   },
   {
     name: "Phone",
     icon: Phone,
-    link: "tel:+918480618808",
-    value: "+91 84806 18808",
+    link: "tel:+919876543210",
+    value: "+91 9876543210",
     copy: true,
   },
 ];
@@ -53,14 +53,17 @@ export default function Contact() {
         </h1>
 
         <p className="text-neutral-400 text-lg mb-6">
-          Open to collaborations, impactful projects, and meaningful conversations.
+          I am actively seeking entry-level opportunities and open to
+          discussions, collaborations, and learning experiences.
         </p>
 
         {/* AVAILABILITY */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full
-                        bg-white/5 border border-white/10 text-sm text-neutral-300">
+        <div
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full
+                        bg-white/5 border border-white/10 text-sm text-neutral-300"
+        >
           <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-          Available for opportunities & discussions
+          Available for entry-level roles
         </div>
       </motion.section>
 
@@ -79,7 +82,7 @@ export default function Contact() {
         transition={{ duration: 0.6 }}
         className="mt-28 text-center text-neutral-500 text-sm"
       >
-        Prefer email? I usually respond within a day.
+        Prefer email? I usually respond within 24 hours.
       </motion.section>
     </main>
   );
@@ -150,7 +153,6 @@ function ContactCard({ item, index }) {
           </div>
         </div>
 
-        {/* COPY BUTTON */}
         {item.copy && (
           <button
             onClick={handleCopy}

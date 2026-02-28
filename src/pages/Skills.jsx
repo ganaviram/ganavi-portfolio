@@ -12,7 +12,7 @@ const fadeUp = {
 
 export default function Skills() {
   return (
-    <main className="relative overflow-hidden">
+    <main className="relative overflow-hidden bg-black text-white">
 
       {/* HERO */}
       <section className="min-h-[70vh] flex items-center justify-center px-6 text-center">
@@ -23,25 +23,25 @@ export default function Skills() {
           className="max-w-4xl"
         >
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-            Tools change.
-            <span className="block bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient">
-              Systems thinking doesn’t.
+            Building strong
+            <span className="block bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              technical foundations.
             </span>
           </h1>
 
           <p className="mt-6 text-lg text-white/70">
-            My skills span infrastructure, data, reliability, automation,
-            and product — unified by a systems-first mindset.
+            My skills are built around programming fundamentals,
+            database management, and web development.
           </p>
 
           <p className="mt-10 italic text-white/40">
-            “Depth before noise. Reliability before novelty.”
+            “Strong basics create confident developers.”
           </p>
         </motion.div>
       </section>
 
       {/* SKILLS DOMAINS */}
-      <section className="max-w-7xl mx-auto px-6 py-32 space-y-28">
+      <section className="max-w-6xl mx-auto px-6 py-32 space-y-24">
 
         {skillDomains.map((domain, index) => (
           <motion.div
@@ -52,8 +52,8 @@ export default function Skills() {
             viewport={{ once: true }}
             transition={{ delay: index * 0.1 }}
           >
-            <div className="mb-10">
-              <h2 className="text-3xl font-semibold">
+            <div className="mb-8">
+              <h2 className="text-2xl md:text-3xl font-semibold">
                 {domain.title}
               </h2>
               <p className="mt-3 text-white/60 max-w-3xl">
@@ -81,7 +81,7 @@ export default function Skills() {
         ))}
       </section>
 
-      {/* HOW I USE THESE SKILLS */}
+      {/* HOW I APPLY SKILLS */}
       <section className="py-32 bg-white/5 px-6">
         <motion.div
           variants={fadeUp}
@@ -91,15 +91,15 @@ export default function Skills() {
           className="max-w-5xl mx-auto"
         >
           <h2 className="text-3xl font-semibold mb-10">
-            How I Use These Skills
+            How I Apply My Skills
           </h2>
 
           <ul className="space-y-5 text-white/70">
-            <li>• Choose tools based on problem constraints, not trends</li>
-            <li>• Design for failure before success</li>
-            <li>• Automate repetitive work to protect human focus</li>
-            <li>• Balance speed with correctness and security</li>
-            <li>• Think in systems, not isolated components</li>
+            <li>• Write clean and readable Python code</li>
+            <li>• Design simple and efficient database structures</li>
+            <li>• Build basic web interfaces using HTML, CSS, and JavaScript</li>
+            <li>• Practice problem-solving regularly</li>
+            <li>• Continuously learn new technologies</li>
           </ul>
         </motion.div>
       </section>
@@ -113,24 +113,22 @@ export default function Skills() {
           transition={{ duration: 1 }}
         >
           <h2 className="text-4xl font-bold mb-6">
-            Skills evolve. Judgment compounds.
+            Always learning. Always improving.
           </h2>
 
           <p className="text-white/60 mb-10 max-w-2xl mx-auto">
-            I continue to learn — but always with intent,
-            context, and responsibility.
+            I am committed to strengthening my technical knowledge
+            and gaining hands-on experience in real-world development.
           </p>
 
-          {/* FIXED BUTTON */}
           <Link
             to="/projects"
             className="inline-block px-8 py-4 rounded-full
                        bg-gradient-to-r from-indigo-500 to-pink-500
                        text-white font-medium hover:opacity-90 transition"
           >
-            See my work
+            View My Projects
           </Link>
-
         </motion.div>
       </section>
     </main>
@@ -141,117 +139,61 @@ export default function Skills() {
 
 const skillDomains = [
   {
-    title: "Cloud & Infrastructure",
+    title: "Programming Languages",
     description:
-      "Designing and operating scalable, secure, and production-grade cloud environments.",
-    skills: [
-      "AWS",
-      "Azure",
-      "GCP",
-      "Multi-Cloud Architecture",
-      "Infrastructure Provisioning",
-    ],
-  },
-  {
-    title: "DevOps & Site Reliability Engineering",
-    description:
-      "Building automation-first systems that scale reliably under pressure.",
-    skills: [
-      "CI/CD Automation",
-      "Terraform",
-      "OpenTofu",
-      "Ansible",
-      "Release Engineering",
-      "SRE Practices",
-    ],
-  },
-  {
-    title: "Data Platforms & ETL",
-    description:
-      "Engineering batch and streaming data systems with reliability and scale.",
-    skills: [
-      "ETL Architecture",
-      "Apache Spark",
-      "Apache Airflow",
-      "Data Lakes",
-      "Streaming Platforms",
-      "Redpanda / Kafka",
-    ],
-  },
-  {
-    title: "Databases & Storage Systems",
-    description:
-      "Selecting and operating databases based on workload, scale, and consistency needs.",
-    skills: [
-      "PostgreSQL",
-      "MariaDB",
-      "MySQL",
-      "Oracle",
-      "MongoDB",
-      "DynamoDB",
-      "Amazon RDS",
-      "Amazon Redshift",
-      "YugabyteDB",
-      "Snowflake",
-    ],
-  },
-  {
-    title: "Programming & Automation",
-    description:
-      "Writing clear, maintainable code to automate systems and data workflows.",
+      "Core programming knowledge developed through academic learning and internship training.",
     skills: [
       "Python",
-      "Scala",
-      "Java",
-      "JavaScript",
-      "Node.js",
+      "JavaScript (Basics)",
+    ],
+  },
+  {
+    title: "Web Development",
+    description:
+      "Building simple and user-friendly web applications.",
+    skills: [
       "HTML",
       "CSS",
-      "React",
+      "JavaScript",
     ],
   },
   {
-    title: "Observability & Reliability",
+    title: "Database Management",
     description:
-      "Ensuring systems are measurable, debuggable, and resilient.",
+      "Understanding relational databases and basic database operations.",
     skills: [
-      "Grafana",
-      "Prometheus",
-      "Metrics & Alerting",
-      "Logging & Tracing",
-      "Incident Response",
+      "MySQL",
+      "SQL Queries",
     ],
   },
   {
-    title: "Networking & Security",
+    title: "Operating Systems",
     description:
-      "Designing secure network foundations with best-practice security controls.",
+      "Comfortable working with different operating environments.",
     skills: [
-      "VPC Design",
-      "IAM",
-      "Network Security",
-      "Firewall Rules",
-      "Secure Architectures",
+      "Windows",
+      "Linux (Basics)",
     ],
   },
   {
-    title: "Web & Product Engineering",
+    title: "AI / ML Fundamentals",
     description:
-      "Building user-facing systems with a focus on performance and usability.",
+      "Basic understanding of AI/ML concepts through internship training.",
     skills: [
-      "Web Development",
-      "API Design",
-      "Frontend Architecture",
+      "Python for AI/ML",
+      "Basic Machine Learning Concepts",
     ],
   },
   {
-    title: "AI / ML (Applied)",
+    title: "Soft Skills",
     description:
-      "Exploring AI/ML as an extension of data systems — applied, not hype-driven.",
+      "Professional qualities that support effective teamwork and growth.",
     skills: [
-      "Applied AI/ML",
-      "Data-Driven Systems",
-      "Experimentation Mindset",
+      "Team Collaboration",
+      "Communication Skills",
+      "Time Management",
+      "Adaptability",
+      "Problem Solving",
     ],
   },
 ];

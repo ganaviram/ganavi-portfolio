@@ -1,14 +1,54 @@
-<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" fill="none">
- <defs>
-  <linearGradient y2="1" x2="1" y1="0" x1="0" id="grad">
-   <stop stop-color="#7C7CFF" offset="0%"/>
-   <stop stop-color="#FF6EC7" offset="100%"/>
-  </linearGradient>
- </defs>
- <g>
-  <title>Layer 1</title>
-  <path stroke="null" id="svg_1" d="m3.25002,21.97308c0,-11.12465 8.47488,-20.47309 18.55999,-20.47309l20.87999,0c10.08511,0 18.55999,9.34844 18.55999,20.47309l0,17.91396c0,11.12465 -7.31487,21.1129 -17.39998,21.1129l-22.03999,-0.63981c-8.92511,0 -18.55999,-9.34844 -18.55999,-20.47309l0,-17.91396z" opacity="undefined" fill="#0A0A0A"/>
-  <text style="cursor: move;" transform="matrix(1.48773 0 0 1.36709 -18.6287 -13.3711)" stroke="null" id="svg_2" font-weight="700" font-family="Inter, system-ui, -apple-system, BlinkMacSystemFont" font-size="36" fill="url(#grad)" text-anchor="middle" y="44.42569" x="33.94276">A</text>
-  <path stroke="null" id="svg_3" d="m49.49997,29.49998c-2.48618,0 -4.49999,-2.01381 -4.49999,-4.49999c0,-2.48618 2.01381,-4.49999 4.49999,-4.49999c2.48618,0 4.49999,2.01381 4.49999,4.49999c0,2.48618 -2.01381,4.49999 -4.49999,4.49999z" opacity="undefined" fill="url(#grad)"/>
- </g>
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <!-- Main Ribbon Gradient -->
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8ED6FF"></stop>
+      <stop offset="25%" stop-color="#3B82F6"></stop>
+      <stop offset="50%" stop-color="#7C3AED"></stop>
+      <stop offset="70%" stop-color="#EC4899"></stop>
+      <stop offset="85%" stop-color="#F97316"></stop>
+      <stop offset="100%" stop-color="#FACC15"></stop>
+    </linearGradient>
+
+    <!-- Inner Gloss -->
+    <linearGradient id="glossGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.7"></stop>
+      <stop offset="100%" stop-color="white" stop-opacity="0"></stop>
+    </linearGradient>
+
+    <!-- Glow -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="blur"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Ribbon G Shape -->
+  <path d="M390 120
+       C330 60, 200 60, 150 160
+       C100 260, 180 360, 280 360
+       C350 360, 380 310, 350 280
+       C330 260, 300 260, 260 270
+       C230 280, 200 250, 220 220
+       C250 180, 320 200, 360 240
+       C420 300, 380 420, 260 420
+       C130 420, 60 310, 100 200
+       C140 90, 300 50, 390 120 Z" fill="url(#mainGradient)" filter="url(#glow)"></path>
+
+  <!-- Gloss Overlay -->
+  <path d="M350 130
+       C300 80, 220 90, 170 160
+       C210 120, 280 120, 330 160 Z" fill="url(#glossGradient)"></path>
+
+  <!-- Sparkle -->
+  <g transform="translate(380,110)">
+    <circle r="6" fill="white"></circle>
+    <line x1="-20" y1="0" x2="20" y2="0" stroke="white" stroke-width="2"></line>
+    <line x1="0" y1="-20" x2="0" y2="20" stroke="white" stroke-width="2"></line>
+  </g>
+
 </svg>

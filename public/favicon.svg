@@ -1,0 +1,14 @@
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" fill="none">
+ <defs>
+  <linearGradient y2="1" x2="1" y1="0" x1="0" id="grad">
+   <stop stop-color="#7C7CFF" offset="0%"/>
+   <stop stop-color="#FF6EC7" offset="100%"/>
+  </linearGradient>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <path stroke="null" id="svg_1" d="m3.25002,21.97308c0,-11.12465 8.47488,-20.47309 18.55999,-20.47309l20.87999,0c10.08511,0 18.55999,9.34844 18.55999,20.47309l0,17.91396c0,11.12465 -7.31487,21.1129 -17.39998,21.1129l-22.03999,-0.63981c-8.92511,0 -18.55999,-9.34844 -18.55999,-20.47309l0,-17.91396z" opacity="undefined" fill="#0A0A0A"/>
+  <text style="cursor: move;" transform="matrix(1.48773 0 0 1.36709 -18.6287 -13.3711)" stroke="null" id="svg_2" font-weight="700" font-family="Inter, system-ui, -apple-system, BlinkMacSystemFont" font-size="36" fill="url(#grad)" text-anchor="middle" y="44.42569" x="33.94276">A</text>
+  <path stroke="null" id="svg_3" d="m49.49997,29.49998c-2.48618,0 -4.49999,-2.01381 -4.49999,-4.49999c0,-2.48618 2.01381,-4.49999 4.49999,-4.49999c2.48618,0 4.49999,2.01381 4.49999,4.49999c0,2.48618 -2.01381,4.49999 -4.49999,4.49999z" opacity="undefined" fill="url(#grad)"/>
+ </g>
+</svg>
